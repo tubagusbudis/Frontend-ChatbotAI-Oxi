@@ -5,7 +5,7 @@ export function Footer() {
         DESIGN & INTERFACE BY
       </p>
       <p className="text-[10px] sm:text-xs text-white tracking-[0.2em] uppercase font-bold">
-        OXIGEN
+        ©OXIGEN 2026
       </p>
     </footer>
   );
