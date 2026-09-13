@@ -12,7 +12,7 @@ export function AssistantGreeting() {
       </div>
       
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2 text-center">
-        Hi, I'm Oxigen.
+        Hi, I'm Oxiox.
       </h1>
       
       <p className="text-base sm:text-lg text-blue-200/80 text-center max-w-md">
