@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Paperclip, AudioLines, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { PromptTextarea } from "./PromptTextarea.jsx";
 import { IconButton } from "../common/IconButton.jsx";
 
@@ -35,40 +35,20 @@ export function ChatComposer({ onSend, status }) {
           </div>
 
           {/* Action Bar */}
-          <div className="flex items-center justify-between mt-2 px-1 pb-1">
-            <div className="flex items-center gap-2">
-              <button
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
-                disabled={disabled}
-                title="Attach file"
-              >
-                <Paperclip size={16} className="rotate-45" />
-              </button>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <button
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
-                disabled={disabled}
-                title="Voice input"
-              >
-                <AudioLines size={16} />
-              </button>
-
-              {/* Tombol Send Diperbarui - Menggunakan Azure/Cyan dan teks putih */}
-              <button
-                className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors shadow-lg ${
-                  prompt.trim()
-                    ? "bg-[#003fdc] hover:bg-[#0EA5E9] text-white"
-                    : "bg-[#38BDF8]/50 text-white/60"
-                }`}
-                onClick={handleSend}
-                disabled={disabled || !prompt.trim()}
-                title="Send message"
-              >
-                <ArrowUp size={18} strokeWidth={2.5} />
-              </button>
-            </div>
+          <div className="flex items-center justify-end mt-2 px-1 pb-1">
+            {/* Tombol Send Diperbarui - Menggunakan Azure/Cyan dan teks putih */}
+            <button
+              className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors shadow-lg ${
+                prompt.trim()
+                  ? "bg-[#003fdc] hover:bg-[#0EA5E9] text-white"
+                  : "bg-[#38BDF8]/50 text-white/60"
+              }`}
+              onClick={handleSend}
+              disabled={disabled || !prompt.trim()}
+              title="Send message"
+            >
+              <ArrowUp size={18} strokeWidth={2.5} />
+            </button>
           </div>
         </div>
       </div>
