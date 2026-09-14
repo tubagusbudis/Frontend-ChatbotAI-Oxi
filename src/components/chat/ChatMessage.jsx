@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import oxioxLogo from "../../assets/icon.png"
 
 function cn(...inputs) {
   return twMerge(clsx(inputs));
@@ -21,7 +22,7 @@ export function ChatMessage({ message }) {
         {!isUser && (
           <div className="flex items-center gap-2 mb-2">
             <img
-              src="/public/images/icon.png"
+              src={oxioxLogo}
               alt="Oxigen Logo"
               className="bg-white w-5 h-5 object-contain rounded-sm shadow-sm"
             />
