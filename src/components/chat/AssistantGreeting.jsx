@@ -1,3 +1,6 @@
+import React from "react";
+import { BouncyText } from "../BouncyText";
+
 export function AssistantGreeting() {
   return (
     <div className="flex flex-col items-center justify-center flex-1 w-full opacity-0 animate-[fadeIn_0.5s_ease-out_forwards] translate-y-4">
@@ -11,9 +14,10 @@ export function AssistantGreeting() {
         </div>
       </div>
 
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2 text-center">
-        Hi, I'm Oxiox AI.
-      </h1>
+      <BouncyText
+        text="Hi, I'm Oxiox AI."
+        className="text-3xl md:text-4xl font-bold text-white mb-2"
+      />
 
       <p className="text-base sm:text-lg text-blue-200/80 text-center max-w-md">
         How can I help you today?

@@ -22,7 +22,7 @@ export const chatApi = {
           message: {
             id: "msg_" + Math.random().toString(36).substring(7),
             role: "assistant",
-            content: `Ini adalah respon dummy dari Oxiox untuk pertanyaan lo: "${prompt}". Kalau API backend aslinya udah jadi, teks ini bakal diganti sama jawaban AI beneran.`,
+            content: `Ini adalah respon dummy dari Oxiox untuk pertanyaan mu: "${prompt}". Kalau API backend aslinya udah jadi, teks ini bakal diganti sama jawaban AI beneran.`,
             createdAt: new Date().toISOString(),
           },
         });
