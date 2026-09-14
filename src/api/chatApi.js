@@ -6,7 +6,7 @@
 export const chatApi = {
   async sendMessage(prompt, conversationId) {
     // Simulate network latency (1-2 seconds)
-    const delay = Math.random() * 1000 + 1000;
+    const delay = Math.floor(Math.random() * 1500) + 2000;
     
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -17,11 +17,12 @@ export const chatApi = {
         }
 
         resolve({
-          conversationId: conversationId || "conv_" + Math.random().toString(36).substring(7),
+          conversationId:
+            conversationId || "conv_" + Math.random().toString(36).substring(7),
           message: {
             id: "msg_" + Math.random().toString(36).substring(7),
             role: "assistant",
-            content: `This is a simulated response to: "${prompt}".\n\nWhen the real API is connected, this will contain the actual AI generated answer. React is a JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called "components".`,
+            content: `Ini adalah respon dummy dari Oxiox untuk pertanyaan lo: "${prompt}". Kalau API backend aslinya udah jadi, teks ini bakal diganti sama jawaban AI beneran.`,
             createdAt: new Date().toISOString(),
           },
         });

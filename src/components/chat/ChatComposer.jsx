@@ -59,7 +59,7 @@ export function ChatComposer({ onSend, status }) {
               <button
                 className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors shadow-lg ${
                   prompt.trim()
-                    ? "bg-[#38BDF8] hover:bg-[#0EA5E9] text-white"
+                    ? "bg-[#003fdc] hover:bg-[#0EA5E9] text-white"
                     : "bg-[#38BDF8]/50 text-white/60"
                 }`}
                 onClick={handleSend}

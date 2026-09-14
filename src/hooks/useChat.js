@@ -9,6 +9,7 @@ export function useChat() {
 
   const sendMessage = useCallback(
     async (content) => {
+      // Validasi biar tidak duble hit saat sedang menunggu respon atau sedang loading
       if (!content.trim() || status === "sending" || status === "streaming") return;
 
       const userMessage = {

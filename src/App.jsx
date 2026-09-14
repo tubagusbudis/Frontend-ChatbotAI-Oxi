@@ -11,7 +11,7 @@ function App() {
   const isEmpty = messages.length === 0;
 
   return (
-    <AppShell>
+    <AppShell showBack={!isEmpty}>
       {/* Error Banner */}
       {error && (
         <div className="w-full max-w-3xl mx-auto mb-4 bg-red-500/20 border border-red-500/50 text-red-100 px-4 py-3 rounded-xl flex items-center justify-between">
