@@ -76,7 +76,7 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan *project* ini di komputer k
 
 ## 📡 API Integration
 
-Aplikasi ini mengirimkan setiap pertanyaan (*prompt*) dari user ke *endpoint* API (Webhook n8n) berikut:
+Aplikasi ini mengirimkan setiap pertanyaan (*prompt*) dari user ke *endpoint* API (Webhook n8n) berikut. **Di balik API tersebut, sistem menggunakan n8n yang dihubungkan ke beberapa model AI canggih dengan *workflow* yang telah dirancang dan dioptimalkan untuk menjadi yang terbaik dalam memberikan respons.**
 - **Endpoint**: `https://n8n.oxiox.my.id/webhook/2f5b14ba-d8f2-49d4-aac0-4c218783c312`
 - **Method**: `POST`
 - **Payload**:
