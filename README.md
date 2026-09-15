@@ -1,32 +1,96 @@
-# React + Javascript + Vite
+# 🤖 Oxiox AI Chatbot - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+<div align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue" alt="Framer Motion" />
+</div>
 
-Currently, two official plugins are available:
+<br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<div align="center">
+  <strong>Masa Depan Interaksi Kampus UKM Oxigen Ada di Sini.</strong> <br>
+  Antarmuka web modern, responsif, dan dinamis untuk AI Chatbot eksklusif UKM Oxigen, dibangun dengan teknologi web terkini.
+</div>
 
-## React Compiler
+<br />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<div align="center">
+  <a href="https://frontend-chatbot-ai-oxi.vercel.app/">
+    <img src="https://img.shields.io/badge/Live_Demo-frontend--chatbot--ai--oxi.vercel.app-10b981?style=for-the-badge&logo=vercel" alt="Live Demo" />
+  </a>
+</div>
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## ✨ Fitur Utama
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+- 🎨 **Desain UI/UX Modern & Premium**: Antarmuka bergaya *glassmorphism* dan mode gelap elegan.
+- ⚡ **Sangat Cepat**: Dibangun dengan **Vite** dan **React 19**, menjamin waktu render instan dan *loading* secepat kilat.
+- 📱 **Responsif di Semua Perangkat**: Tampilan *chat* yang sempurna baik di desktop maupun *smartphone*.
+- ✨ **Animasi Mulus**: Didukung oleh **Framer Motion** & **GSAP** untuk transisi *chat*, *typing indicator*, dan kemunculan elemen yang *smooth*.
+- 🔗 **Smart Text Formatting**: Otomatis mendeteksi *link* agar bisa diklik dan mendeteksi teks tebal *(bold markdown)* dari AI.
+- 🔌 **Integrasi n8n API**: Terhubung langsung ke *webhook backend* n8n untuk pemrosesan NLP dari AI Chatbot.
+
+## 🛠️ Teknologi yang Digunakan
+
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS v4 + clsx + tailwind-merge
+- **Animasi**: Framer Motion & GSAP
+- **Ikon**: Lucide React
+- **Deployment**: Vercel
+
+## 🚀 Memulai (Menjalankan secara Lokal)
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan *project* ini di komputer kamu.
+
+### Persyaratan
+- [Node.js](https://nodejs.org/en/) versi 18 ke atas
+- npm, yarn, pnpm, atau bun (pilih salah satu)
+
+### Instalasi
+
+1. **Clone repository ini** (jika menggunakan git)
+   ```bash
+   git clone <URL_REPO_KAMU>
+   cd ai-chatbot-frontend
+   ```
+
+2. **Install dependensi**
+   ```bash
+   npm install
+   # atau
+   yarn install
+   ```
+
+3. **Jalankan Development Server**
+   ```bash
+   npm run dev
+   # atau
+   yarn dev
+   ```
+
+4. **Buka di Browser**
+   Buka `http://localhost:5173` di browser kamu untuk melihat aplikasinya!
+
+## 📡 API Integration
+
+Aplikasi ini mengirimkan setiap pertanyaan (*prompt*) dari user ke *endpoint* API (Webhook n8n) berikut:
+- **Endpoint**: `https://n8n.oxiox.my.id/webhook/2f5b14ba-d8f2-49d4-aac0-4c218783c312`
+- **Method**: `POST`
+- **Payload**:
+  ```json
+  {
+    "id": "MABA-1234",
+    "text": "Apa itu UKM Oxigen?"
   }
-}
-```
+  ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 🤝 Kontribusi
+Jika kamu dari tim UKM Oxigen dan ingin berkontribusi menambah fitur (seperti *chat history* atau *dark/light theme toggle*), jangan ragu untuk membuat *Pull Request* atau *Issue*!
+
+---
+<div align="center">
+  Dibuat dengan 💙 oleh Tim UKM Oxigen
+</div>
