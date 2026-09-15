@@ -5,4 +5,13 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      '/api-n8n': {
+        target: 'https://n8n.oxiox.my.id',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-n8n/, ''),
+      },
+    },
+  },
 })

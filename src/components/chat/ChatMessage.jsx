@@ -30,9 +30,17 @@ export function ChatMessage({ message }) {
           </div>
         )}
         
-        <div className="whitespace-pre-wrap font-sans">
-          {message.content}
-        </div>
+        <div 
+          className="whitespace-pre-wrap font-sans"
+          dangerouslySetInnerHTML={{
+            __html: typeof message.content === 'string' 
+              ? message.content
+                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline underline-offset-2">$1</a>')
+                  .replace(/\n/g, '<br />')
+              : message.content
+          }}
+        />
       </div>
     </div>
   );

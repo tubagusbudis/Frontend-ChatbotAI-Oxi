@@ -5,7 +5,13 @@ export function useChat() {
   const [messages, setMessages] = useState([]);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState(null);
-  const [conversationId, setConversationId] = useState();
+  const [conversationId, setConversationId] = useState(() => {
+    const saved = localStorage.getItem("oxiox_chat_id");
+    if (saved) return saved;
+    const newId = "MABA-" + Math.floor(Math.random() * 10000);
+    localStorage.setItem("oxiox_chat_id", newId);
+    return newId;
+  });
 
   const sendMessage = useCallback(
     async (content) => {
